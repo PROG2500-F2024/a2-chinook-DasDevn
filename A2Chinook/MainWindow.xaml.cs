@@ -20,5 +20,45 @@ namespace A2Chinook
         {
             InitializeComponent();
         }
+
+        private void Home_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Artists_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Albums_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Tracks_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void HomeButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ArtistsButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void AlbumsButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void TracksButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

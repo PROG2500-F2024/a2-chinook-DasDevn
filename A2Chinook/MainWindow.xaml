@@ -6,10 +6,68 @@
         xmlns:local="clr-namespace:A2Chinook"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    
+    <Window.Resources>
+        <ResourceDictionary>
+            <BitmapImage x:Key="homeImage" UriSource="/Images/home.png"></BitmapImage>
+            <BitmapImage x:Key="artistsImage" UriSource="/Images/artists.png"></BitmapImage>
+            <BitmapImage x:Key="albumsImage" UriSource="/Images/albums.png"></BitmapImage>
+            <BitmapImage x:Key="tracksImage" UriSource="/Images/tracks.png"></BitmapImage>
+        </ResourceDictionary>
+    </Window.Resources>
 
-    </Grid>
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="Pages">
+                <MenuItem x:Name="Home" Header="_Home" Click="Home_Click">
+                    <MenuItem.Icon>
+                        <Image Source="{StaticResource homeImage}"></Image>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem x:Name="Artists" Header="_Artists" Click="Artists_Click">
+                    <MenuItem.Icon>
+                        <Image Source="{StaticResource artistsImage}"></Image>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem x:Name="Albums" Header="_Albums" Click="Albums_Click">
+                    <MenuItem.Icon>
+                        <Image Source="{StaticResource albumsImage}"></Image>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem x:Name="Tracks" Header="_Tracks" Click="Tracks_Click">
+                    <MenuItem.Icon>
+                        <Image Source="{StaticResource tracksImage}"></Image>
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+        </Menu>
+        <ToolBar DockPanel.Dock="Left">
+            <StackPanel Orientation="Vertical" Width="50">
+                <Button x:Name="HomeButton" ToolTip="Go To Home"
+                        Click="HomeButton_Click">
+                    <Image Source="{StaticResource homeImage}"></Image>
+                </Button>
+                <Button x:Name="ArtistsButton" ToolTip="View Artists"
+                        Click="ArtistsButton_Click">
+                    <Image Source="{StaticResource artistsImage}"></Image>
+                </Button>
+                <Button x:Name="AlbumsButton" ToolTip="View Albums"
+                        Click="AlbumsButton_Click">
+                    <Image Source="{StaticResource albumsImage}"></Image>
+                </Button>
+                <Button x:Name="TracksButton" ToolTip="Go To Tracks"
+                        Click="TracksButton_Click">
+                    <Image Source="{StaticResource tracksImage}"></Image>
+                </Button>
+            </StackPanel>
+        </ToolBar>
+        <Frame x:Name="mainFrame" DockPanel.Dock="Bottom" Width="Auto" Height="Auto"
+               NavigationUIVisibility="Hidden">
+        </Frame>
+    </DockPanel>
 </Window>
+
+
 
 <!--<a href="https://www.flaticon.com/free-icons/track" title="track icons">Track icons created by Freepik - Flaticon</a>-->
 <!--<a href="https://www.flaticon.com/free-icons/music-and-multimedia" title="music and multimedia icons">Music and multimedia icons created by Anggara - Flaticon</a>-->
