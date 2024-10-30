@@ -13,12 +13,15 @@
     </Page.Resources>
 
     <StackPanel>
-        <TextBlock Text="ALBUMS PAGE" FontSize="48"></TextBlock>
+        <TextBlock Text="TRACKS PAGE" FontSize="48"></TextBlock>
         <DataGrid ItemsSource="{Binding Source={StaticResource trackViewSource}}"
               AutoGenerateColumns="False">
             <DataGrid.Columns>
-                <DataGridTextColumn Binding="{Binding TrackId}" Header="ID"></DataGridTextColumn>
-                <DataGridTextColumn Binding="{Binding Name}" Header="Album Name"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding SizeInMB}"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding FormattedTime}"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding UnitPrice}"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding Name}"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding Composer}"></DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>
     </StackPanel>

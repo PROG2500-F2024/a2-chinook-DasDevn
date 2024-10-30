@@ -49,6 +49,12 @@
                 </MenuItem>
             </MenuItem>
         </Menu>
+        <TextBlock DockPanel.Dock="Top"
+               Text="Welcome to the Chinook Music Store!"
+               FontSize="24"
+               FontWeight="Bold"
+               HorizontalAlignment="Center"
+               TextAlignment="Center"/>
         <ToolBar DockPanel.Dock="Left">
             <StackPanel Orientation="Vertical" Width="95">
                 <Button x:Name="HomeButton" ToolTip="Go To Home"

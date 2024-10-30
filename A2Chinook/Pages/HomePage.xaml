@@ -9,6 +9,7 @@
       Title="HomePage">
 
     <StackPanel>
-        <TextBlock Text="HOME PAGE" FontSize="48"></TextBlock>
+        <TextBlock Text="Chinook - Your one-stop shop for great music" FontSize="24" Margin="0,0,0,10"></TextBlock>
+        <TextBlock Text="Please select a page to begin your musical journey" FontSize="15"></TextBlock>
     </StackPanel>
 </Page>
