@@ -4,7 +4,8 @@ using A2Chinook.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace A2Chinook.Data;
-
+//Scaffold-dbcontext used to generate models/context
+//scaffold-dbcontext "Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Chinook;Integrated Security=True;Trust Server Certificate=False;" Microsoft.EntityFrameworkCore.SqlServer -contextdir Data -outputdir Models/Generated -contextnamespace A2Chinook.Data -namespace A2Chinook.Models -force
 public partial class ChinookContext : DbContext
 {
     public ChinookContext()
