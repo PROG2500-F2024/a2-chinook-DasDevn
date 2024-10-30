@@ -55,7 +55,7 @@
                         Click="AlbumsButton_Click">
                     <Image Source="{StaticResource albumsImage}"></Image>
                 </Button>
-                <Button x:Name="TracksButton" ToolTip="Go To Tracks"
+                <Button x:Name="TracksButton" ToolTip="View Tracks"
                         Click="TracksButton_Click">
                     <Image Source="{StaticResource tracksImage}"></Image>
                 </Button>
