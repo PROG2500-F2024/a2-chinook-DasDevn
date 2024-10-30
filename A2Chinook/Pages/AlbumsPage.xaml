@@ -8,7 +8,20 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="AlbumsPage">
 
-    <Grid>
-        
-    </Grid>
+    <Page.Resources>
+        <CollectionViewSource x:Key="albumViewSource"></CollectionViewSource>
+    </Page.Resources>
+
+    <StackPanel>
+        <TextBlock Text="ALBUMS PAGE" FontSize="48"></TextBlock>
+        <DataGrid ItemsSource="{Binding Source={StaticResource albumViewSource}}"
+                  AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding AlbumId}" Header="ID"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding Title}" Header="Title"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding ArtistId}" Header="ArtistID"></DataGridTextColumn>
+
+            </DataGrid.Columns>
+        </DataGrid>
+    </StackPanel>
 </Page>

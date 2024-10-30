@@ -1,17 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using Microsoft.EntityFrameworkCore;
+using A2Chinook.Data;
+
 
 namespace A2Chinook.Pages
 {
@@ -20,9 +12,25 @@ namespace A2Chinook.Pages
     /// </summary>
     public partial class TracksPage : Page
     {
+        ChinookContext context = new ChinookContext();
+        CollectionViewSource trackViewSource = new CollectionViewSource();
         public TracksPage()
         {
             InitializeComponent();
+
+            //Tie the markup viewsource object to the C# code viewsource object
+            trackViewSource = (CollectionViewSource)FindResource(nameof(trackViewSource));
+
+            //use the dbConteext to tell ef to load the data we want to use on this page
+            context.Tracks.Load();
+
+            //Set the viewsource data source to use the employees data collection (dbset)
+            trackViewSource.Source = context.Tracks.Local.ToObservableCollection();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            context.SaveChanges();
         }
     }
 }

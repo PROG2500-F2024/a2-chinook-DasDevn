@@ -42,21 +42,21 @@
             </MenuItem>
         </Menu>
         <ToolBar DockPanel.Dock="Left">
-            <StackPanel Orientation="Vertical" Width="50">
+            <StackPanel Orientation="Vertical" Width="95">
                 <Button x:Name="HomeButton" ToolTip="Go To Home"
-                        Click="HomeButton_Click">
+                        Click="Home_Click">
                     <Image Source="{StaticResource homeImage}"></Image>
                 </Button>
                 <Button x:Name="ArtistsButton" ToolTip="View Artists"
-                        Click="ArtistsButton_Click">
+                        Click="Artists_Click">
                     <Image Source="{StaticResource artistsImage}"></Image>
                 </Button>
                 <Button x:Name="AlbumsButton" ToolTip="View Albums"
-                        Click="AlbumsButton_Click">
+                        Click="Albums_Click">
                     <Image Source="{StaticResource albumsImage}"></Image>
                 </Button>
                 <Button x:Name="TracksButton" ToolTip="View Tracks"
-                        Click="TracksButton_Click">
+                        Click="Tracks_Click">
                     <Image Source="{StaticResource tracksImage}"></Image>
                 </Button>
             </StackPanel>
@@ -72,4 +72,4 @@
 <!--<a href="https://www.flaticon.com/free-icons/track" title="track icons">Track icons created by Freepik - Flaticon</a>-->
 <!--<a href="https://www.flaticon.com/free-icons/music-and-multimedia" title="music and multimedia icons">Music and multimedia icons created by Anggara - Flaticon</a>-->
 <!--<a href="https://www.flaticon.com/free-icons/music-album" title="music album icons">Music album icons created by Freepik - Flaticon</a>-->
-<!--<a href="https://www.flaticon.com/free-icons/home" title="home icons">Home icons created by Freepik - Flaticon</a>-->
+<!--<a href="https://www.flaticon.com/free-icons/vinyl" title="vinyl icons">Vinyl icons created by Freepik - Flaticon</a>-->

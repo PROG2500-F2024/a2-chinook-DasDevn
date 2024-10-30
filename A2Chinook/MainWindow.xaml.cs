@@ -23,42 +23,23 @@ namespace A2Chinook
 
         private void Home_Click(object sender, RoutedEventArgs e)
         {
-
+            mainFrame.NavigationService.Navigate(new Pages.HomePage());
         }
 
         private void Artists_Click(object sender, RoutedEventArgs e)
         {
-
+            mainFrame.NavigationService.Navigate(new Pages.ArtistsPage());
         }
 
         private void Albums_Click(object sender, RoutedEventArgs e)
         {
-
+            mainFrame.NavigationService.Navigate(new Pages.AlbumsPage()); ;
         }
 
         private void Tracks_Click(object sender, RoutedEventArgs e)
         {
-
+            mainFrame.NavigationService.Navigate(new Pages.TracksPage());
         }
 
-        private void HomeButton_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void ArtistsButton_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void AlbumsButton_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void TracksButton_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
     }
 }
