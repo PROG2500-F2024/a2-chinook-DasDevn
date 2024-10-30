@@ -41,5 +41,9 @@ namespace A2Chinook
             mainFrame.NavigationService.Navigate(new Pages.TracksPage());
         }
 
+        private void Exit_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
     }
 }

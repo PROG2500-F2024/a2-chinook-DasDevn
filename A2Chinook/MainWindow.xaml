@@ -13,11 +13,19 @@
             <BitmapImage x:Key="artistsImage" UriSource="/Images/artists.png"></BitmapImage>
             <BitmapImage x:Key="albumsImage" UriSource="/Images/albums.png"></BitmapImage>
             <BitmapImage x:Key="tracksImage" UriSource="/Images/tracks.png"></BitmapImage>
+            <BitmapImage x:Key="exitImage" UriSource="/Images/exit.png"></BitmapImage>
         </ResourceDictionary>
     </Window.Resources>
 
     <DockPanel>
         <Menu DockPanel.Dock="Top">
+            <MenuItem Header="File">
+                <MenuItem x:Name="Exit" Header="_Exit" Click="Exit_Click">
+                    <MenuItem.Icon>
+                        <Image Source="{StaticResource exitImage}"></Image>
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
             <MenuItem Header="Pages">
                 <MenuItem x:Name="Home" Header="_Home" Click="Home_Click">
                     <MenuItem.Icon>
@@ -73,3 +81,4 @@
 <!--<a href="https://www.flaticon.com/free-icons/music-and-multimedia" title="music and multimedia icons">Music and multimedia icons created by Anggara - Flaticon</a>-->
 <!--<a href="https://www.flaticon.com/free-icons/music-album" title="music album icons">Music album icons created by Freepik - Flaticon</a>-->
 <!--<a href="https://www.flaticon.com/free-icons/vinyl" title="vinyl icons">Vinyl icons created by Freepik - Flaticon</a>-->
+<!--<a href="https://www.flaticon.com/free-icons/exit" title="exit icons">Exit icons created by GOFOX - Flaticon</a>-->
