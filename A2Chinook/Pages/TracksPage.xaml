@@ -50,17 +50,3 @@
         </ListView>
     </StackPanel>
 </Page>
-
-
-
-
-<!--<DataGrid ItemsSource="{Binding Source={StaticResource trackViewSource}}"
-              AutoGenerateColumns="False">
-            <DataGrid.Columns>
-                <DataGridTextColumn Binding="{Binding SizeInMB}"></DataGridTextColumn>
-                <DataGridTextColumn Binding="{Binding FormattedTime}"></DataGridTextColumn>
-                <DataGridTextColumn Binding="{Binding UnitPrice}"></DataGridTextColumn>
-                <DataGridTextColumn Binding="{Binding Name}"></DataGridTextColumn>
-                <DataGridTextColumn Binding="{Binding Composer}"></DataGridTextColumn>
-            </DataGrid.Columns>
-        </DataGrid>-->

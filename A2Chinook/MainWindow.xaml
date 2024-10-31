@@ -16,8 +16,8 @@
             <BitmapImage x:Key="exitImage" UriSource="/Images/exit.png"></BitmapImage>
         </ResourceDictionary>
     </Window.Resources>
-
-    <DockPanel>
+    <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+        <DockPanel>
         <Menu DockPanel.Dock="Top">
             <MenuItem Header="File">
                 <MenuItem x:Name="Exit" Header="_Exit" Click="Exit_Click">
@@ -79,6 +79,7 @@
                NavigationUIVisibility="Hidden">
         </Frame>
     </DockPanel>
+    </ScrollViewer>
 </Window>
 
 
