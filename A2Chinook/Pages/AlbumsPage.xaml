@@ -13,17 +13,15 @@
     </Page.Resources>
 
     <StackPanel>
-        <TextBlock Text="Chinook Albums" FontSize="48"></TextBlock>
-        <DataGrid ItemsSource="{Binding Source={StaticResource albumViewSource}}"
-            AutoGenerateColumns="False"
-            GridLinesVisibility="None"
-            BorderBrush="Transparent"
-            HeadersVisibility="Column"    
-            AlternatingRowBackground="LightGray">
-        <DataGrid.Columns>
-            <DataGridTextColumn Binding="{Binding AlbumId}" Header="ID"></DataGridTextColumn>
-            <DataGridTextColumn Binding="{Binding Title}" Header="Album Name"></DataGridTextColumn>
-        </DataGrid.Columns>
-        </DataGrid>
+        <TextBlock Text="Chinook Albums" FontSize="48" Margin="0,0,0,10"/>
+        <ListView ItemsSource="{Binding Source={StaticResource albumViewSource}}"
+                  AlternationCount="2">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="ID" DisplayMemberBinding="{Binding AlbumId}" Width="100"/>
+                    <GridViewColumn Header="Album Name" DisplayMemberBinding="{Binding Title}" Width="200"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
     </StackPanel>
 </Page>
