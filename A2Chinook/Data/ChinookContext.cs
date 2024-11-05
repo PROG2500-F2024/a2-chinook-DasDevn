@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
+﻿using System.Configuration;
 using A2Chinook.Models;
 using Microsoft.EntityFrameworkCore;
 

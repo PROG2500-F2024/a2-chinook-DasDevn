@@ -10,10 +10,15 @@
 
     <Page.Resources>
         <CollectionViewSource x:Key="albumViewSource"></CollectionViewSource>
+        <Style x:Key="HeaderTextStyle" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Margin" Value="0,0,0,10"/>
+        </Style>
     </Page.Resources>
 
     <StackPanel>
-        <TextBlock Text="Chinook Albums" FontSize="48" Margin="0,0,0,10"/>
+        <TextBlock Text="Chinook Albums" Style="{StaticResource HeaderTextStyle}"/>
         <ListView ItemsSource="{Binding Source={StaticResource albumViewSource}}"
                   AlternationCount="2">
             <ListView.View>

@@ -8,26 +8,27 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="ArtistsPage">
 
-    
     <Page.Resources>
         <CollectionViewSource x:Key="artistViewSource"></CollectionViewSource>
-        <Style x:Key="CellPaddingStyle" TargetType="TextBlock">
-            <Setter Property="Padding" Value="10,0,10,0"/>
+        <Style x:Key="HeaderTextStyle" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Margin" Value="0,0,0,10"/>
         </Style>
     </Page.Resources>
 
     <StackPanel>
-        <TextBlock Text="Chinook Artists" FontSize="24"></TextBlock>
+        <TextBlock Text="Chinook Artists" Style="{StaticResource HeaderTextStyle}"/>
         <DataGrid ItemsSource="{Binding Source={StaticResource artistViewSource}}"
-                AutoGenerateColumns="False"
-                GridLinesVisibility="None"
-                BorderBrush="Transparent"
-                HeadersVisibility="Column"    
-                AlternatingRowBackground="LightGray">
-        <DataGrid.Columns>
-            <DataGridTextColumn Binding="{Binding ArtistId}" Header="ID"></DataGridTextColumn>
-            <DataGridTextColumn Binding="{Binding Name}" Header="Artist Name"></DataGridTextColumn>
-        </DataGrid.Columns>
+                  AutoGenerateColumns="False"
+                  GridLinesVisibility="None"
+                  BorderBrush="Transparent"
+                  HeadersVisibility="Column"    
+                  AlternatingRowBackground="LightGray">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding ArtistId}" Header="ID"/>
+                <DataGridTextColumn Binding="{Binding Name}" Header="Artist Name"/>
+            </DataGrid.Columns>
         </DataGrid>
     </StackPanel>
 </Page>
