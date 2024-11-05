@@ -5,7 +5,10 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="HomePage">
+      Title="HomePage"
+      Background="{StaticResource BlueToWhiteGradient}">
+
+
 
     <Page.Resources>
         <Style x:Key="HeaderTextStyle" TargetType="TextBlock">

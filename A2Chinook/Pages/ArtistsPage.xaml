@@ -6,7 +6,8 @@
       xmlns:local="clr-namespace:A2Chinook.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="ArtistsPage">
+      Title="ArtistsPage"
+      Background="{StaticResource BlueToWhiteGradient}">
 
     <Page.Resources>
         <CollectionViewSource x:Key="artistViewSource"></CollectionViewSource>
@@ -17,14 +18,13 @@
         </Style>
     </Page.Resources>
 
-    <StackPanel>
+    <StackPanel Background="Transparent">
         <TextBlock Text="Chinook Artists" Style="{StaticResource HeaderTextStyle}"/>
         <DataGrid ItemsSource="{Binding Source={StaticResource artistViewSource}}"
                   AutoGenerateColumns="False"
                   GridLinesVisibility="None"
                   BorderBrush="Transparent"
-                  HeadersVisibility="Column"    
-                  AlternatingRowBackground="LightGray">
+                  HeadersVisibility="Column">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding ArtistId}" Header="ID"/>
                 <DataGridTextColumn Binding="{Binding Name}" Header="Artist Name"/>

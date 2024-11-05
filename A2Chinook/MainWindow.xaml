@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:A2Chinook"
         mc:Ignorable="d"
-        Title="MainWindow" Height="475" Width="800">
+        Title="MainWindow" Height="475" Width="800"
+        Background="{StaticResource BlueToWhiteGradient}">
     
     <Window.Resources>
         <ResourceDictionary>
@@ -55,7 +56,8 @@
                FontWeight="Bold"
                HorizontalAlignment="Center"
                TextAlignment="Center"/>
-        <ToolBar DockPanel.Dock="Left">
+            <ToolBar DockPanel.Dock="Left"
+         Background="{StaticResource BlueToWhiteGradient}">
             <StackPanel Orientation="Vertical" Width="95">
                 <Button x:Name="HomeButton" ToolTip="Go To Home"
                         Click="Home_Click">

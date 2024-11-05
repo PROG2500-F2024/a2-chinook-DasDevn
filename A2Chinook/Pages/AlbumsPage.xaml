@@ -6,7 +6,8 @@
       xmlns:local="clr-namespace:A2Chinook.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="AlbumsPage">
+      Title="AlbumsPage"
+      Background="{StaticResource BlueToWhiteGradient}">
 
     <Page.Resources>
         <CollectionViewSource x:Key="albumViewSource"></CollectionViewSource>
