@@ -19,11 +19,9 @@
     </Page.Resources>
 
     <StackPanel Background="Transparent">
-        <TextBlock Text="Chinook Artists" Style="{StaticResource HeaderTextStyle}"/>
+        <TextBlock Text="Chinook Artists" Style="{StaticResource HeaderTextStyle}" Background="{StaticResource BlueToWhiteGradient}"/>
         <DataGrid ItemsSource="{Binding Source={StaticResource artistViewSource}}"
                   AutoGenerateColumns="False"
-                  GridLinesVisibility="None"
-                  BorderBrush="Transparent"
                   HeadersVisibility="Column">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding ArtistId}" Header="ID"/>

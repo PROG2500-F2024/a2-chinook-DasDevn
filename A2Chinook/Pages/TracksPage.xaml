@@ -23,8 +23,8 @@
     </Page.Resources>
 
     <StackPanel>
-        <TextBlock Text="Chinook Tracks" Style="{StaticResource HeaderTextStyle}"/>
-        <ListView ItemsSource="{Binding Source={StaticResource trackViewSource}}">
+        <TextBlock Text="Chinook Tracks"  Background="{StaticResource BlueToWhiteGradient}" Style="{StaticResource HeaderTextStyle}"/>
+        <ListView ItemsSource="{Binding Source={StaticResource trackViewSource}}" >
             <ListView.ItemContainerStyle>
                 <Style TargetType="ListViewItem">
                     <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
@@ -34,7 +34,7 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <!--layout -->
-                    <Grid Margin="5">
+                    <Grid Margin="5" Background="{StaticResource BlueToWhiteGradient}" >
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="400" />
                             <ColumnDefinition Width="*" />
@@ -44,7 +44,7 @@
                         <Border BorderThickness="3" Margin="5" Grid.Column="0">
                             <StackPanel Orientation="Vertical">
                                 <TextBlock Text="{Binding Name}" FontWeight="Bold" FontSize="14"/>
-                                <TextBlock Text="{Binding Composer, StringFormat='Composer: {0}'}" FontSize="12" Foreground="Gray"/>
+                                <TextBlock Text="{Binding Composer, StringFormat='Composer: {0}'}" FontSize="12" Foreground="Black"/>
                             </StackPanel>
                         </Border>
 

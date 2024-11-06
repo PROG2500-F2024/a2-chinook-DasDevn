@@ -5,9 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:A2Chinook"
         mc:Ignorable="d"
-        Title="MainWindow" Height="475" Width="800"
+        Title="Chinook Music Catalog" Height="475" Width="800"
         Background="{StaticResource BlueToWhiteGradient}">
-    
+
+
+
     <Window.Resources>
         <ResourceDictionary>
             <BitmapImage x:Key="homeImage" UriSource="/Images/home.png"></BitmapImage>
@@ -17,9 +19,9 @@
             <BitmapImage x:Key="exitImage" UriSource="/Images/exit.png"></BitmapImage>
         </ResourceDictionary>
     </Window.Resources>
-    <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
-        <DockPanel>
-        <Menu DockPanel.Dock="Top">
+
+    <DockPanel>
+        <Menu DockPanel.Dock="Top" Background="{StaticResource BlueToWhiteGradient}">
             <MenuItem Header="File">
                 <MenuItem x:Name="Exit" Header="_Exit" Click="Exit_Click">
                     <MenuItem.Icon>
@@ -50,39 +52,40 @@
                 </MenuItem>
             </MenuItem>
         </Menu>
-        <TextBlock DockPanel.Dock="Top"
-               Text="Welcome to the Chinook Music Store!"
-               FontSize="24"
-               FontWeight="Bold"
-               HorizontalAlignment="Center"
-               TextAlignment="Center"/>
-            <ToolBar DockPanel.Dock="Left"
-         Background="{StaticResource BlueToWhiteGradient}">
+
+        <ToolBar DockPanel.Dock="Left" Background="{StaticResource BlueToWhiteGradient}">
             <StackPanel Orientation="Vertical" Width="95">
-                <Button x:Name="HomeButton" ToolTip="Go To Home"
-                        Click="Home_Click">
+                <Button x:Name="HomeButton" ToolTip="Go To Home" Click="Home_Click">
                     <Image Source="{StaticResource homeImage}"></Image>
                 </Button>
-                <Button x:Name="ArtistsButton" ToolTip="View Artists"
-                        Click="Artists_Click">
+                <Button x:Name="ArtistsButton" ToolTip="View Artists" Click="Artists_Click">
                     <Image Source="{StaticResource artistsImage}"></Image>
                 </Button>
-                <Button x:Name="AlbumsButton" ToolTip="View Albums"
-                        Click="Albums_Click">
+                <Button x:Name="AlbumsButton" ToolTip="View Albums" Click="Albums_Click">
                     <Image Source="{StaticResource albumsImage}"></Image>
                 </Button>
-                <Button x:Name="TracksButton" ToolTip="View Tracks"
-                        Click="Tracks_Click">
+                <Button x:Name="TracksButton" ToolTip="View Tracks" Click="Tracks_Click">
                     <Image Source="{StaticResource tracksImage}"></Image>
                 </Button>
             </StackPanel>
         </ToolBar>
-        <Frame x:Name="mainFrame" DockPanel.Dock="Bottom" Width="Auto" Height="Auto"
-               NavigationUIVisibility="Hidden">
-        </Frame>
+
+        <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+            <DockPanel>
+                <TextBlock DockPanel.Dock="Top"
+                           Text="Welcome to the Chinook Music Store!"
+                           FontSize="24"
+                           FontWeight="Bold"
+                           HorizontalAlignment="Center"
+                           TextAlignment="Center"/>
+                <Frame x:Name="mainFrame" DockPanel.Dock="Bottom" Width="Auto" Height="Auto"
+                       NavigationUIVisibility="Hidden">
+                </Frame>
+            </DockPanel>
+        </ScrollViewer>
     </DockPanel>
-    </ScrollViewer>
 </Window>
+
 
 
 

@@ -19,11 +19,11 @@
     </Page.Resources>
 
     <StackPanel>
-        <TextBlock Text="Chinook Albums" Style="{StaticResource HeaderTextStyle}"/>
+        <TextBlock Text="Chinook Albums" Style="{StaticResource HeaderTextStyle}" Background="{StaticResource BlueToWhiteGradient}"/>
         <ListView ItemsSource="{Binding Source={StaticResource albumViewSource}}"
                   AlternationCount="2">
             <ListView.View>
-                <GridView>
+                <GridView >
                     <GridViewColumn Header="ID" DisplayMemberBinding="{Binding AlbumId}" Width="100"/>
                     <GridViewColumn Header="Album Name" DisplayMemberBinding="{Binding Title}" Width="200"/>
                 </GridView>

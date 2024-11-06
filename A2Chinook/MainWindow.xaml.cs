@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using A2Chinook.Pages;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -19,6 +20,7 @@ namespace A2Chinook
         public MainWindow()
         {
             InitializeComponent();
+            mainFrame.Navigate(new HomePage());
         }
 
         private void Home_Click(object sender, RoutedEventArgs e)

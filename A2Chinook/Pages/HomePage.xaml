@@ -19,7 +19,7 @@
     </Page.Resources>
 
     <StackPanel>
-        <TextBlock Text="Chinook - Your one-stop shop for great music" Style="{StaticResource HeaderTextStyle}"/>
-        <TextBlock Text="Please select a page to begin your musical journey" FontSize="15"/>
+        <TextBlock Text="Chinook - Your one-stop shop for great music" Style="{StaticResource HeaderTextStyle}" Background="{StaticResource BlueToWhiteGradient}"/>
+        <TextBlock Text="Please select a page to begin your musical journey" FontSize="15" Background="{StaticResource BlueToWhiteGradient}"/>
     </StackPanel>
 </Page>
