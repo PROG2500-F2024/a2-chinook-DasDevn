@@ -11,6 +11,7 @@ namespace A2Chinook.Pages
     /// </summary>
     public partial class AlbumsPage : Page
     {
+        
         ChinookContext context = new ChinookContext();
         CollectionViewSource albumViewSource = new CollectionViewSource();
         public AlbumsPage()
@@ -30,6 +31,23 @@ namespace A2Chinook.Pages
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             context.SaveChanges();
+        }
+
+        private void btnSearch_Click(object sender, RoutedEventArgs e)
+        {
+            //Linq
+            //Retrieve a single value
+
+            //Define LINQ
+            var query = from album in context.Albums
+                        where album.Title.Contains(textSearch.Text)
+                        orderby album.Title.StartsWith(textSearch.Text) descending, album.Title
+                        select album;
+
+            ListAlbumSearchResults.ItemsSource = query.ToList();
+
+            FullAlbumListView.Visibility = Visibility.Collapsed;
+            ListAlbumSearchResults.Visibility = Visibility.Visible;
         }
     }
 }
