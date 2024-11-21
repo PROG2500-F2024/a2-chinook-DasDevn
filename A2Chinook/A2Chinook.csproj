@@ -11,6 +11,8 @@
   <ItemGroup>
     <None Remove="Images\albums.png" />
     <None Remove="Images\artists.png" />
+    <None Remove="Images\catalog.png" />
+    <None Remove="Images\customerOrder.png" />
     <None Remove="Images\exit.png" />
     <None Remove="Images\home.png" />
     <None Remove="Images\tracks.png" />
@@ -21,6 +23,12 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\artists.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\catalog.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\customerOrder.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\exit.png">

@@ -17,6 +17,8 @@
             <BitmapImage x:Key="albumsImage" UriSource="/Images/albums.png"></BitmapImage>
             <BitmapImage x:Key="tracksImage" UriSource="/Images/tracks.png"></BitmapImage>
             <BitmapImage x:Key="exitImage" UriSource="/Images/exit.png"></BitmapImage>
+            <BitmapImage x:Key="customerOrderImage" UriSource="/Images/customerOrder.png"></BitmapImage>
+            <BitmapImage x:Key="catalogImage" UriSource="/Images/catalog.png"></BitmapImage>
         </ResourceDictionary>
     </Window.Resources>
 
@@ -35,26 +37,36 @@
                         <Image Source="{StaticResource homeImage}"></Image>
                     </MenuItem.Icon>
                 </MenuItem>
-                <MenuItem x:Name="Artists" Header="_Artists" Click="Artists_Click">
+                <MenuItem x:Name="Artists" Header="_View Artists" Click="Artists_Click">
                     <MenuItem.Icon>
                         <Image Source="{StaticResource artistsImage}"></Image>
                     </MenuItem.Icon>
                 </MenuItem>
-                <MenuItem x:Name="Albums" Header="_Albums" Click="Albums_Click">
+                <MenuItem x:Name="Albums" Header="_View Albums" Click="Albums_Click">
                     <MenuItem.Icon>
                         <Image Source="{StaticResource albumsImage}"></Image>
                     </MenuItem.Icon>
                 </MenuItem>
-                <MenuItem x:Name="Tracks" Header="_Tracks" Click="Tracks_Click">
+                <MenuItem x:Name="Tracks" Header="_View Tracks" Click="Tracks_Click">
                     <MenuItem.Icon>
                         <Image Source="{StaticResource tracksImage}"></Image>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem x:Name="MusicCatalog" Header="_View Catalog" Click="CatalogButton_Click">
+                    <MenuItem.Icon>
+                        <Image Source="{StaticResource catalogImage}"></Image>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem x:Name="CustomerOrder" Header="_View Customer Order" Click="CustomerOrderButton_Click">
+                    <MenuItem.Icon>
+                        <Image Source="{StaticResource customerOrderImage}"></Image>
                     </MenuItem.Icon>
                 </MenuItem>
             </MenuItem>
         </Menu>
 
         <ToolBar DockPanel.Dock="Left" Background="{StaticResource BlueToWhiteGradient}">
-            <StackPanel Orientation="Vertical" Width="95">
+            <StackPanel Orientation="Vertical" Width="68">
                 <Button x:Name="HomeButton" ToolTip="Go To Home" Click="Home_Click">
                     <Image Source="{StaticResource homeImage}"></Image>
                 </Button>
@@ -66,6 +78,12 @@
                 </Button>
                 <Button x:Name="TracksButton" ToolTip="View Tracks" Click="Tracks_Click">
                     <Image Source="{StaticResource tracksImage}"></Image>
+                </Button>
+                <Button x:Name="CatalogButton" ToolTip="View Music Catalog" Click="CatalogButton_Click">
+                    <Image Source="{StaticResource catalogImage}"></Image>
+                </Button>
+                <Button x:Name="CustomerOrderButton" ToolTip="View Customer Order" Click="CustomerOrderButton_Click">
+                    <Image Source="{StaticResource customerOrderImage}"></Image>
                 </Button>
             </StackPanel>
         </ToolBar>
@@ -94,3 +112,5 @@
 <!--<a href="https://www.flaticon.com/free-icons/music-album" title="music album icons">Music album icons created by Freepik - Flaticon</a>-->
 <!--<a href="https://www.flaticon.com/free-icons/vinyl" title="vinyl icons">Vinyl icons created by Freepik - Flaticon</a>-->
 <!--<a href="https://www.flaticon.com/free-icons/exit" title="exit icons">Exit icons created by GOFOX - Flaticon</a>-->
+<!--<a href="https://www.flaticon.com/free-icons/booklet" title="booklet icons">Booklet icons created by Freepik - Flaticon</a>-->
+<!--<a href="https://www.flaticon.com/free-icons/customer" title="customer icons">Customer icons created by Eucalyp - Flaticon</a>-->

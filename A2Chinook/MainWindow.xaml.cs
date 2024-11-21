@@ -47,5 +47,15 @@ namespace A2Chinook
         {
             Application.Current.Shutdown();
         }
+
+        private void CatalogButton_Click(object sender, RoutedEventArgs e)
+        {
+            mainFrame.NavigationService.Navigate(new Pages.CatalogPage());
+        }
+
+        private void CustomerOrderButton_Click(object sender, RoutedEventArgs e)
+        {
+            mainFrame.NavigationService.Navigate(new Pages.CustomerOrders());
+        }
     }
 }
