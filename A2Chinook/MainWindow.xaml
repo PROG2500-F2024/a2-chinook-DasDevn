@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:A2Chinook"
         mc:Ignorable="d"
-        Title="Chinook Music Catalog" Height="475" Width="800"
+        Title="Chinook Music Catalog" Height="475" Width="875"
         Background="{StaticResource BlueToWhiteGradient}">
 
 
