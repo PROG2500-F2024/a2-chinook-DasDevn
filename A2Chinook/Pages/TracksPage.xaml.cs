@@ -3,6 +3,7 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using Microsoft.EntityFrameworkCore;
 using A2Chinook.Data;
+using System.Linq;
 
 
 namespace A2Chinook.Pages
@@ -31,6 +32,19 @@ namespace A2Chinook.Pages
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             context.SaveChanges();
+        }
+
+        private void btnSearch_Click(object sender, RoutedEventArgs e)
+        {
+            var query = from track in context.Tracks
+                        where track.Name.Contains(textSearch.Text)
+                        orderby track.Name.StartsWith(textSearch.Text) descending, track.Name
+                        select track;
+
+            ListTrackSearchResults.ItemsSource = query.ToList();
+
+            FullTrackListView.Visibility = Visibility.Collapsed;
+            ListTrackSearchResults.Visibility = Visibility.Visible;
         }
     }
 }
