@@ -47,7 +47,7 @@ namespace A2Chinook.Pages
                 where cust.LastName.Contains(textSearch.Text)
                 select new
                 {
-                    FullName = cust.FirstName + " " + cust.LastName,
+                    FullName = cust.LastName + " " + cust.FirstName,
                     cust.City,
                     cust.Country,
                     cust.Email,
