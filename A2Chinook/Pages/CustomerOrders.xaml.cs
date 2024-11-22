@@ -66,7 +66,7 @@ namespace A2Chinook.Pages
                     ).ToList()
                 };
 
-            catalogListView.ItemsSource = query.ToList();
+            customerOrdersListView.ItemsSource = query.ToList();
         }
     }
 }
