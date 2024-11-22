@@ -6,9 +6,68 @@
       xmlns:local="clr-namespace:A2Chinook.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="CustomerOrders">
+      Title="CustomerOrders"  Background="{StaticResource BlueToWhiteGradient}">
 
-    <Grid>
-        
-    </Grid>
+    <Page.Resources>
+        <CollectionViewSource x:Key="customerOrdersViewSource"></CollectionViewSource>
+        <Style x:Key="HeaderTextStyle" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Margin" Value="0,5,50,0"/>
+        </Style>
+    </Page.Resources>
+
+    <StackPanel>
+        <StackPanel Orientation="Horizontal" Background="{StaticResource BlueToWhiteGradient}" Margin="10">
+            <TextBlock Text="Customer Orders" Style="{StaticResource HeaderTextStyle}"/>
+            <Label Content="Search:" FontSize="24" Margin="10,0,0,0"/>
+            <TextBox x:Name="textSearch" Width="300" FontSize="24" Margin="0,6,0,10"/>
+            <Button x:Name="btnSearch" Click="btnSearch_Click" Background="Transparent" BorderBrush="Transparent">
+                <Button.Content>
+                    <Image Source="/Images/search.png" Width="30" Margin="0,6,0,10"/>
+                </Button.Content>
+            </Button>
+        </StackPanel>
+
+        <!-- ListView for Customers -->
+        <ListView x:Name="catalogListView" Background="{StaticResource BlueToWhiteGradient}">
+            <ListView.ItemTemplate>
+                <DataTemplate >
+                    <StackPanel Orientation="Horizontal" Margin="5" >
+                        <!-- Customer Details -->
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock Text="{Binding FullName}" Margin="2" FontWeight="Bold"/>
+                            <TextBlock Text="{Binding City}" Margin="2"/>
+                            <TextBlock Text="{Binding Country}" Margin="2"/>
+                            <TextBlock Text="{Binding Email}" Margin="2"/>
+                        </StackPanel>
+
+                        <!-- Expander for Viewing Invoices -->
+                        <Expander Margin="10,0,0,0">
+                            <Expander.Header>
+                                <TextBlock Text="View Invoice(s)" FontSize="18"/>
+                            </Expander.Header>
+                            <ListView ItemsSource="{Binding Invoices}">
+                                <ListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <StackPanel Background="{StaticResource BlueToWhiteGradient}" >
+                                            <StackPanel Orientation="Horizontal" Width="300">
+                                                <!-- Order Date -->
+                                                <TextBlock Text="Order Date: " FontWeight="Bold"/>
+                                                <TextBlock Text="{Binding InvoiceDate, StringFormat='{}{0:yyyy-MM-dd}'}" FontWeight="Bold"/>
+                                                <TextBlock Text=" Total: "/>
+                                                <TextBlock Text="{Binding Total, StringFormat='{}{0:C}'}"/>
+                                                <TextBlock Text=" Quantity: " />
+                                                <TextBlock Text="{Binding TotalQuantity}"/>
+                                            </StackPanel>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
+                        </Expander>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackPanel>
 </Page>
