@@ -19,10 +19,33 @@
     </Page.Resources>
 
     <StackPanel Background="Transparent">
-        <TextBlock Text="Chinook Artists" Style="{StaticResource HeaderTextStyle}" Background="{StaticResource BlueToWhiteGradient}"/>
-        <DataGrid ItemsSource="{Binding Source={StaticResource artistViewSource}}"
+        <StackPanel Orientation="Horizontal" Background="{StaticResource BlueToWhiteGradient}">
+            <TextBlock Text="Chinook Artists" Style="{StaticResource HeaderTextStyle}"/>
+            <Label Content="Search Artists:" FontSize="24" />
+            <TextBox x:Name="textSearch" Width="300" FontSize="24" Margin="0,6,0,10"></TextBox>
+            <Button x:Name="btnSearch" Click="btnSearch_Click"  Background="Transparent" BorderBrush="Transparent">
+                <Button.Content>
+                    <Image Source="/Images/search.png" Width="30" Margin="0,6,0,10"/>
+                </Button.Content>
+            </Button>
+        </StackPanel>
+
+        <DataGrid x:Name="ListArtistSearchResults"
+                  ItemsSource="{Binding Source={StaticResource artistViewSource}}"
                   AutoGenerateColumns="False"
-                  HeadersVisibility="Column">
+                  HeadersVisibility="Column"
+                  Visibility="Collapsed">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding ArtistId}" Header="ID"/>
+                <DataGridTextColumn Binding="{Binding Name}" Header="Artist Name"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <DataGrid x:Name="FullArtistDataGrid"
+                  ItemsSource="{Binding Source={StaticResource artistViewSource}}"
+                  AutoGenerateColumns="False"
+                  HeadersVisibility="Column"
+                  Visibility="Visible">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding ArtistId}" Header="ID"/>
                 <DataGridTextColumn Binding="{Binding Name}" Header="Artist Name"/>

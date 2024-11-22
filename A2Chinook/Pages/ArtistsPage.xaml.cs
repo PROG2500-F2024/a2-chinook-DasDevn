@@ -3,6 +3,8 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using Microsoft.EntityFrameworkCore;
 using A2Chinook.Data;
+using System.Linq;
+using A2Chinook.Models;
 
 namespace A2Chinook.Pages
 {
@@ -30,6 +32,20 @@ namespace A2Chinook.Pages
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             context.SaveChanges();
+        }
+
+        private void btnSearch_Click(object sender, RoutedEventArgs e)
+        {
+            var query = from artist in context.Artists
+                        where artist.Name.Contains(textSearch.Text)
+                        orderby artist.ArtistId ascending
+            select artist;
+
+       
+            ListArtistSearchResults.ItemsSource = query.ToList();
+
+            FullArtistDataGrid.Visibility = Visibility.Collapsed;
+            ListArtistSearchResults.Visibility = Visibility.Visible;
         }
     }
 }

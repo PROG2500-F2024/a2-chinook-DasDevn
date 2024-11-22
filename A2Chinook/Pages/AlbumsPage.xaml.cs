@@ -41,7 +41,7 @@ namespace A2Chinook.Pages
             //Define LINQ
             var query = from album in context.Albums
                         where album.Title.Contains(textSearch.Text)
-                        orderby album.Title.StartsWith(textSearch.Text) descending, album.Title
+                        orderby album.AlbumId ascending
                         select album;
 
             ListAlbumSearchResults.ItemsSource = query.ToList();
