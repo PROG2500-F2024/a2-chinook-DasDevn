@@ -34,6 +34,31 @@
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="{Binding Index}"></TextBlock>
                         <TextBlock Text="{Binding ArtistCount}"></TextBlock>
+                        <!--Second Level Artists-->
+                        <Expander Header="View Artist(s)">
+                        <ListView ItemsSource="{Binding artist}">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="{Binding Name}"></TextBlock>
+                                    <!--Third Level Albums-->
+                                            <Expander Header="View Albums">
+                                                <ListView ItemsSource="{Binding Albums}">
+                                                    <ListView.ItemTemplate>
+                                                        <DataTemplate>
+                                                            <StackPanel Orientation="Horizontal">
+                                                                <TextBlock Text="{Binding Title}" />
+                                                                <!-- Display album name -->
+                                                            </StackPanel>
+                                                        </DataTemplate>
+                                                    </ListView.ItemTemplate>
+                                                </ListView>
+                                            </Expander>
+                                        </StackPanel>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                        </Expander>
                     </StackPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>
